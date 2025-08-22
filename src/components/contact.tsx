@@ -4,7 +4,14 @@ import ContactForm from "./contactform";
 
 export default function Contact() {
     return (
-        <div id="contacto" style={{ textAlign: 'center', padding: '50px' }}>
+        <div id="contacto"
+            style={{
+                textAlign: 'center',
+                padding: '16px',
+                paddingLeft: '4vw',
+                paddingRight: '4vw'
+            }}
+        >
             <Typography variant="h2" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
                 Contacto
             </Typography>

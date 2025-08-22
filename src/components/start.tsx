@@ -4,7 +4,19 @@ import CodeBoltLogo from "./coder";
 
 export default function Start() {
     return (
-        <div id="inicio" style={{ textAlign: 'center', padding: '50px', height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <div id="inicio"
+            style={{
+                textAlign: 'center',
+                padding: '16px',
+                paddingLeft: '4vw',
+                paddingRight: '4vw',
+                height: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}
+        >
             <Typography variant="h2" color="text.primary">Oscar González Tur</Typography>
             <Typography variant="h3" color="text.primary">Ingeniero Informático y Técnico en Electrotecnia</Typography>
             <CodeBoltLogo size={260} glow />

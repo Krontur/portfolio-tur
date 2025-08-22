@@ -3,7 +3,14 @@ import { Typography } from "@mui/material"
 
 export default function About() {
     return (
-        <div id="sobre-mi" style={{ textAlign: 'center', padding: '50px' }}>
+        <div id="sobre-mi"
+            style={{
+                textAlign: 'center',
+                padding: '16px',
+                paddingLeft: '4vw',
+                paddingRight: '4vw'
+            }}
+        >
             <Typography variant="h2" sx={{ textAlign: 'center', margin: 3 }}>Sobre mí</Typography>
             <Typography variant="body1" color="text.primary">
                 Soy ingeniero informático con base en electrotecnia y he vivido 11 años en Alemania. Soy todavía encargado del 
