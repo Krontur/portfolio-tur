@@ -12,7 +12,12 @@ export default function Skills() {
                 paddingRight: '4vw'
             }}
         >
-            <Typography variant="h2" component="h1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
+            <Typography
+                variant="h2"
+                component="h1"
+                color="text.primary"
+                sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
+            >
                 Habilidades técnicas
             </Typography>
             <Typography variant="body1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>

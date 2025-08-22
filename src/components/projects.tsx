@@ -14,7 +14,13 @@ export default function Projects() {
             }}
         >
             <Box sx={{ p: 2 }}>
-                <Typography variant="h2" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>Proyectos</Typography>
+                <Typography
+                    variant="h2"
+                    color="text.primary"
+                    sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
+                >
+                    Proyectos
+                </Typography>
                 <Typography variant="body1" color="text.primary">
                     Aquí puedes ver algunos de mis proyectos más destacados:
                 </Typography>
