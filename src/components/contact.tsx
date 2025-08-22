@@ -4,19 +4,8 @@ import ContactForm from "./contactform";
 
 export default function Contact() {
     return (
-        <div id="contacto"
-            style={{
-                textAlign: 'center',
-                padding: '16px',
-                paddingLeft: '4vw',
-                paddingRight: '4vw'
-            }}
-        >
-            <Typography
-                variant="h2"
-                color="text.primary"
-                sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
-            >
+    <div id="contacto" style={{ textAlign: 'center', padding: '30px 20px' }}>
+            <Typography variant="h2" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
                 Contacto
             </Typography>
             <Typography variant="body1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>

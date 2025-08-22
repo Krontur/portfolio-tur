@@ -4,20 +4,8 @@ import SkillAvatar from "./newavatar"
 
 export default function Skills() {
     return (
-        <div id="habilidades-tecnicas"
-            style={{
-                textAlign: 'center',
-                padding: '16px',
-                paddingLeft: '4vw',
-                paddingRight: '4vw'
-            }}
-        >
-            <Typography
-                variant="h2"
-                component="h1"
-                color="text.primary"
-                sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
-            >
+    <div id="habilidades-tecnicas" style={{ textAlign: 'center', padding: '30px 20px' }}>
+            <Typography variant="h3" component="h1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
                 Habilidades técnicas
             </Typography>
             <Typography variant="body1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>

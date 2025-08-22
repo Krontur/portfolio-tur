@@ -10,7 +10,6 @@ export default function Footer() {
         mt: "auto",
         backgroundColor: 'transparent',
         boxShadow: 'none', 
-        backdropFilter: 'blur(30px)',
         textAlign: "center",
       }}
     >

@@ -17,20 +17,8 @@ export default function App() {
 
   return (
     <>
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
+      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100vh", zIndex: -1, minWidth: '100vw', minHeight: '100vh', backgroundColor: 'black' }}>
         <ElectroTechBackground  />
-          <div
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100vw',
-              height: '100vh',
-              background: 'rgba(10,16,32,0.65)',
-              zIndex: 0,
-              pointerEvents: 'none',
-            }}
-          />
       </div>
       <ThemeProvider theme={theme}>
         <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', backdropFilter: 'blur(30px)' }}>

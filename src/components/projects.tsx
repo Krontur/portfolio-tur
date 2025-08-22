@@ -5,22 +5,9 @@ import { Box, Typography } from "@mui/material";
 
 export default function Projects() {
     return (
-        <div id="proyectos"
-            style={{
-                textAlign: 'center',
-                padding: '16px',
-                paddingLeft: '4vw',
-                paddingRight: '4vw'
-            }}
-        >
+    <div id="proyectos" style={{ textAlign: 'center', padding: '30px 20px' }}>
             <Box sx={{ p: 2 }}>
-                <Typography
-                    variant="h2"
-                    color="text.primary"
-                    sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
-                >
-                    Proyectos
-                </Typography>
+                <Typography variant="h3" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>Proyectos</Typography>
                 <Typography variant="body1" color="text.primary">
                     Aquí puedes ver algunos de mis proyectos más destacados:
                 </Typography>

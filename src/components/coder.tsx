@@ -117,21 +117,18 @@ export default function CodeBoltLogo({
 
       <circle cx="110" cy="110" r="96" className={`ring${glow ? ' glow-anim-ring' : ''}`} />
 
-      {/* <  chevron izquierdo */}
       <path
         d="M70 72 L30 110 L70 148"
         className={`accent${glow ? ' glow-anim-chevron-left' : ''}`}
         strokeWidth={8}
       />
 
-      {/* Rayo centrado con glow animado */}
       <path
         d="M110 60 L100 110 H120 L105 160"
         className={`accent${glow ? ' glow-anim-bolt' : ''}`}
         strokeWidth={9}
       />
 
-      {/* > chevron derecho */}
       <path
         d="M150 72 L190 110 L150 148"
         className={`accent${glow ? ' glow-anim-chevron-right' : ''}`}

@@ -274,7 +274,7 @@ export default function ElectroTechBackground({
       <svg
         width="100%"
         height="100%"
-        style={{ position: "absolute", inset: 0, mixBlendMode: "overlay" }}
+        style={{ position: "absolute", inset: 0, mixBlendMode: "overlay", backgroundColor: "aliceblue" }}
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
       >

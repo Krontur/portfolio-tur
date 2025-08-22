@@ -5,21 +5,8 @@ import { Typography } from "@mui/material"
 
 export default function Education() {
     return (
-        <div id="educacion"
-            style={{
-                textAlign: 'center',
-                padding: '16px',
-                paddingLeft: '4vw',
-                paddingRight: '4vw'
-            }}
-        >
-            <Typography
-                variant="h2"
-                color="text.primary"
-                sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
-            >
-                Educación
-            </Typography>
+    <div id="educacion" style={{ textAlign: 'center', padding: '30px 20px' }}>
+            <Typography variant="h3" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>Educación</Typography>
             <Typography variant="body1" color="text.primary">Aquí puedes ver mi trayectoria educativa:</Typography>
             <Timeline position="alternate" sx={{ margin: "12px 0", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
                 <TimelineEducationItem

@@ -3,20 +3,8 @@ import { Typography } from "@mui/material"
 
 export default function About() {
     return (
-        <div id="sobre-mi"
-            style={{
-                textAlign: 'center',
-                padding: '16px',
-                paddingLeft: '4vw',
-                paddingRight: '4vw'
-            }}
-        >
-            <Typography
-                variant="h2"
-                sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
-            >
-                Sobre mí
-            </Typography>
+    <div id="sobre-mi" style={{ textAlign: 'center', padding: '30px 20px' }}>
+            <Typography variant="h3" sx={{ textAlign: 'center', margin: 3 }}>Sobre mí</Typography>
             <Typography variant="body1" color="text.primary">
                 Soy ingeniero informático con base en electrotecnia y he vivido 11 años en Alemania. Soy todavía encargado del 
                 departamento de Electrotecnia del Aeropuerto de Leipzig y formador (Ausbilder) de estudiantes de formación 

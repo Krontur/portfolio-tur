@@ -5,21 +5,8 @@ import { Typography } from "@mui/material";
 
 export default function Experience() {
     return (
-        <div id="experiencia-laboral"
-            style={{
-                textAlign: 'center',
-                padding: '16px',
-                paddingLeft: '4vw',
-                paddingRight: '4vw'
-            }}
-        >
-            <Typography
-                variant="h2"
-                color="text.primary"
-                sx={{ textAlign: 'center', margin: 3, fontSize: { xs: '1.7rem', sm: '2.5rem', md: '3rem' }, fontWeight: 700 }}
-            >
-                Experiencia laboral
-            </Typography>
+    <div id="experiencia-laboral" style={{ textAlign: 'center', padding: '30px 20px' }}>
+            <Typography variant="h3" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>Experiencia laboral</Typography>
             <Typography variant="body1" color="text.primary">Aquí puedes ver mi experiencia laboral:</Typography>
             <Timeline position="alternate" sx={{ margin: "12px 0", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
                 <TimelineExperienceItem

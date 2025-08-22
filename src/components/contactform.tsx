@@ -48,15 +48,7 @@ export default function ContactForm() {
             component="form"
             ref={form}
             onSubmit={sendEmail}
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 2,
-                maxWidth: { xs: '100%', sm: 400 },
-                margin: '0 auto',
-                justifyContent: 'center',
-                px: { xs: 0, sm: 2 }
-            }}
+            sx={{ display: 'flex', flexDirection: 'column', gap: 2, maxWidth: '400px', margin: '0 auto', justifyContent: 'center' }}
         >
             <TextField name="name" label="Nombre" variant="outlined" required />
             <TextField name="email" label="Correo electrónico" variant="outlined" type="email" required />
