@@ -26,7 +26,7 @@ export default function App() {
         <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', backdropFilter: 'blur(30px)', flexDirection: 'row', alignItems: 'center', padding: 0 }}>
           <Toolbar>
             <BasicMenu />
-            <Typography variant="h6" color="text.primary">Oscar González Tur</Typography>
+            <Typography variant="h6" color="text.primary" component="a" href="https://portfolio-tur.vercel.app/" sx={{ textDecoration: 'none' }}>Oscar González Tur</Typography>
         </Toolbar>
         {/* Use MUI Box for sx prop support */}
         <Box sx={{ justifyContent: 'right', alignContent: 'right', display: 'flex', flex: 1, margin: 1 }}>
