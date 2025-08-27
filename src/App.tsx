@@ -10,8 +10,10 @@ import About from './components/about'
 import BasicMenu from './components/basicmenu'
 import Footer from './components/footer'
 
-import { AppBar, ThemeProvider, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, ThemeProvider, Toolbar, Typography } from '@mui/material'
 import ElectroTechBackground from './components/electrotechbackground'
+import LanguageSelector from './components/languageselector'
+import './i18n'
 
 export default function App() {
 
@@ -21,11 +23,15 @@ export default function App() {
         <ElectroTechBackground  />
       </div>
       <ThemeProvider theme={theme}>
-        <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', backdropFilter: 'blur(30px)' }}>
+        <AppBar position="fixed" sx={{ backgroundColor: 'transparent', boxShadow: 'none', backdropFilter: 'blur(30px)', flexDirection: 'row', alignItems: 'center', padding: 0 }}>
           <Toolbar>
             <BasicMenu />
             <Typography variant="h6" color="text.primary">Oscar González Tur</Typography>
         </Toolbar>
+        {/* Use MUI Box for sx prop support */}
+        <Box sx={{ justifyContent: 'right', alignContent: 'right', display: 'flex', flex: 1, margin: 1 }}>
+          <LanguageSelector />
+        </Box>
         </AppBar>
 
         <div>

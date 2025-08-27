@@ -1,9 +1,11 @@
 import { Box, Button, TextField } from "@mui/material"
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 
 export default function ContactForm() {
+    const { t } = useTranslation();
 
     emailjs.init({
         publicKey: import.meta.env.VITE_REACT_APP_PUBLIC_KEY,
@@ -50,11 +52,11 @@ export default function ContactForm() {
             onSubmit={sendEmail}
             sx={{ display: 'flex', flexDirection: 'column', gap: 2, maxWidth: '400px', margin: '0 auto', justifyContent: 'center' }}
         >
-            <TextField name="name" label="Nombre" variant="outlined" required />
-            <TextField name="email" label="Correo electrónico" variant="outlined" type="email" required />
-            <TextField name="message" label="Mensaje" variant="outlined" multiline rows={4} required />
+            <TextField name="name" label={t("name")} variant="outlined" required />
+            <TextField name="email" label={t("email")} variant="outlined" type="email" required />
+            <TextField name="message" label={t("message")} variant="outlined" multiline rows={4} required />
             <Button type="submit" variant="contained" color="primary">
-                Enviar
+                {t("send")}
             </Button>
         </Box>
     );

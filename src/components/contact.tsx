@@ -1,15 +1,18 @@
 import { Avatar, Stack, Tooltip, Typography } from "@mui/material";
 import ContactForm from "./contactform";
+import { useTranslation } from "react-i18next";
 
 
 export default function Contact() {
+    const { t } = useTranslation();
+
     return (
     <div id="contacto" style={{ textAlign: 'center', padding: '30px 20px' }}>
             <Typography variant="h2" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
-                Contacto
+                {t("contact")}
             </Typography>
             <Typography variant="body1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
-                Puedes ponerte en contacto conmigo a través de las siguientes plataformas:
+                {t("if-you-would-like-to-get-in-touch")}
             </Typography>
             <ContactForm />
             <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', rowGap: 2, margin: 3  }}>

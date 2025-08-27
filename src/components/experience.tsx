@@ -1,55 +1,52 @@
 import { Timeline } from "@mui/lab";
 import TimelineExperienceItem from "./newtimelineitem";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 
 export default function Experience() {
+    const { t } = useTranslation();
+
     return (
-    <div id="experiencia-laboral" style={{ textAlign: 'center', padding: '30px 20px' }}>
-            <Typography variant="h3" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>Experiencia laboral</Typography>
-            <Typography variant="body1" color="text.primary">Aquí puedes ver mi experiencia laboral:</Typography>
+    <div id="experiencia-laboral" style={{ textAlign: 'center', padding: '40px 20px' }}>
+            <Typography variant="h3" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>{t("experience")}</Typography>
+            <Typography variant="body1" color="text.primary">{t("here-you-can-see-my-work-experience")}</Typography>
             <Timeline position="alternate" sx={{ margin: "12px 0", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
                 <TimelineExperienceItem
                     year={2001}
-                    title="Carpintero Oficial de 2ª"
+                    title = {t("carpenter-official-2nd-class")}
                     company="Maderas Servera"
-                    description="Carpintero, dependiente, comercial, gestión de pedidos, recepción de mercancías, introducción de datos al sistema."
+                    description = {t("carpenter-official-2nd-class-description")}
                 />
                 <TimelineExperienceItem
                     year={2008}
-                    title="Técnico informático"
+                    title={t("technician-in-computer-science")}
                     company="Informática Tur"
-                    description="Servicio técnico Informática para particulares y pequeñas empresas.
-                                    Asistencia Remota.
-                                    Asesoramiento técnico y comercial."
+                    description={t("technician-in-computer-science-description")}
                 />
                 <TimelineExperienceItem
                     year={2013}
-                    title="Técnico Instalación de asistencia domiciliaria."
-                    company="Técnico Instalación de asistencia domiciliaria."
-                    description="Instalación y programación de dispositivos de teleasistencia domiciliaria."
+                    title={t("home-assistance-installation-technician")}
+                    company="Cruz Roja"
+                    description={t("home-assistance-installation-technician-description")}
                 />
                 <TimelineExperienceItem
                     year={2014}
-                    title="Formación profesional Dual"
+                    title={t("dual-professional-training")}
                     company="Elektromontagen Leipzig GmbH"
-                    description="Formación Profesional Dual: Técnico en Electrotecnia, especialidad
-                                    en Energía y Tecnología de Edificios"
+                    description={t("dual-professional-training-description")}
                 />
                 <TimelineExperienceItem
                     year={2017}
-                    title="Encargado Técnico en electrotecnia"
+                    title={t("technical-supervisor-in-electrotechnics")}
                     company="Elektromontagen Leipzig GmbH"
-                    description="Encargado Técnico en electrotecnia:
-                                    Experiencia en: Viviendas, aeropuertos e industria"
+                    description={t("technical-supervisor-in-electrotechnics-description")}
                 />
                 <TimelineExperienceItem
                     year={2021}
-                    title="Coordinador de proyectos y gestor técnico en suministro eléctrico
-                            y redes"
-                    company="Aeropuerto de Leipzig/Halle"
-                    description="Gestión de reparaciones y mantenimiento de instalaciones eléctricas y redes, 
-                                así como supervisión de equipos de trabajo y coordinación de proyectos técnicos."
+                    title={t("project-coordinator-and-technical-manager-in-electricity-supply-and-networks")}
+                    company="Flughafen Leipzig/Halle GmbH"
+                    description={t("project-coordinator-and-technical-manager-in-electricity-supply-and-networks-description")}
                 />
                 <TimelineExperienceItem
                     year={"hoy"}

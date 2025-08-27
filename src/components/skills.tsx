@@ -1,15 +1,18 @@
 import { Stack, Typography } from "@mui/material";
 import SkillAvatar from "./newavatar"
+import { useTranslation } from "react-i18next";
 
 
 export default function Skills() {
+    const { t } = useTranslation();
+
     return (
-    <div id="habilidades-tecnicas" style={{ textAlign: 'center', padding: '30px 20px' }}>
+    <div id="habilidades-tecnicas" style={{ textAlign: 'center', padding: '40px 20px' }}>
             <Typography variant="h3" component="h1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
-                Habilidades técnicas
+                {t("technical-skills")}
             </Typography>
             <Typography variant="body1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
-                Estas son algunas de las tecnologías y herramientas que he utilizado en mis proyectos:
+                {t("these-are-some-of-the-technologies-and-tools-i-have-used-in-my-projects")}
             </Typography>
             <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', rowGap: 2 }}>
                 <SkillAvatar alt="Spring Boot" src="/icons/spring.svg" />

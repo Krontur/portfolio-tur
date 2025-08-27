@@ -1,18 +1,17 @@
 import { Typography } from "@mui/material"
+import { useTranslation } from "react-i18next";
 
 
 export default function About() {
+    const { t } = useTranslation();
+    
     return (
-    <div id="sobre-mi" style={{ textAlign: 'center', padding: '30px 20px' }}>
-            <Typography variant="h3" sx={{ textAlign: 'center', margin: 3 }}>Sobre mí</Typography>
+    <div id="sobre-mi" style={{ textAlign: 'center', padding: '40px 20px' }}>
+            <Typography variant="h3" sx={{ textAlign: 'center', margin: 3 }}>{t("about-me")}</Typography>
             <Typography variant="body1" color="text.primary">
-                Soy ingeniero informático con base en electrotecnia y he vivido 11 años en Alemania. Soy todavía encargado del 
-                departamento de Electrotecnia del Aeropuerto de Leipzig y formador (Ausbilder) de estudiantes de formación 
-                profesional dual. He finalizado recientemente la ingeniería informática y he aplicado esa combinación físico-digital
-                en proyectos como Energy Tracker (TFG de monitorización y análisis), Warehouse (gestión de pedidos para electrotecnia en LEJ),
-                automatización de contadores eléctricos a gran escala y modernización de middleware ActiveMQ↔FTP (Java 3 → Java 11). 
-                Busco roles de backend/full-stack o docencia técnica donde aportar software robusto, documentación clara y transferencia de conocimiento.
+                {t("i-am-oscar-gonzalez-tur")}
             </Typography>
         </div>
     );
 }
+ 
