@@ -210,7 +210,7 @@ i18n.use(initReactI18next).init({
         "today": "Heute",
         "carpenter-official-2nd-class": "Tischler Geselle",
         "technician-in-computer-science": "IT-Techniker",
-        "home-assistance-installation-technician": "Home Assistance Installation Technician",
+        "home-assistance-installation-technician": "Techniker für Installation von Hausnotruf- und Assistenzsystemen",
         "dual-professional-training": "Duale Ausbildung als Elektroniker für Energie- und Gebäudetechnik",
         "technical-supervisor-in-electrotechnics": "Bauleiter für Elektrotechnik",
         "project-coordinator-and-technical-manager-in-electricity-supply-and-networks": "Projektkoordinator und Sachbearbeiter im Bereich Stromversorgung und Netze.",
