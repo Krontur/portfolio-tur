@@ -48,6 +48,14 @@ export default function Projects() {
                         githuburl="https://github.com/Krontur/energytracker_frontend.git"
                     />
                 </Grid>
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} key="project5" sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <ProjectCard
+                        title={t("portfolio-cv-tur")}
+                        description={t("portfolio-cv-tur-description")}
+                        imagepath="/images/portfoliotur.png"
+                        githuburl="https://github.com/Krontur/portfolio-tur.git"
+                    />
+                </Grid>
             </Grid>
         </div>
     );

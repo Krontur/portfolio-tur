@@ -30,6 +30,7 @@ export default function Skills() {
                 <SkillAvatar alt="MongoDB" src="/icons/mongodb.svg" />
                 <SkillAvatar alt="RabbitMQ" src="/icons/rabbitmq.svg" />
                 <SkillAvatar alt="Firebase" src="/icons/firebase.svg" />
+                <SkillAvatar alt="Material UI" src="/icons/materialui.svg" />
             </Stack>
         </div>
     );

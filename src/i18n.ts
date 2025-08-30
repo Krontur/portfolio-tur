@@ -43,6 +43,8 @@ i18n.use(initReactI18next).init({
         "tfg-backend-energy-tracker-description": "Development of the backend for the project managing and collecting energy consumption data from the electric meter network at Leipzig/Halle Airport, ensuring scalability, integration with existing systems, and real-time analysis.",
         "tfg-frontend-energy-tracker": "TFG Frontend Energy Tracker",
         "tfg-frontend-energy-tracker-description": "Development of the frontend for the project managing and collecting energy consumption data from the electric meter network at Leipzig/Halle Airport, focused on intuitive visualization, usability, and cross-platform support.",
+        "portfolio-cv-tur": "Portfolio CV Tur",
+        "portfolio-cv-tur-description": "Personal portfolio created with React and TypeScript to showcase my resume, skills, and projects. The interface is built with Material-UI, providing a modern, responsive, and user-friendly design.",
         // Sección de educación
         "education": "Education",
         "here-you-can-see-my-educational-trajectory": "Here you can see my educational trajectory",
@@ -114,6 +116,8 @@ i18n.use(initReactI18next).init({
         "tfg-frontend-energy-tracker": "TFG Frontend Energy Tracker",
         "tfg-frontend-energy-tracker-description": "Desarrollo del frontend para el proyecto de gestión y recolección de datos de consumo energético en la red de contadores eléctricos del Aeropuerto de Leipzig/Halle, centrado en la visualización intuitiva, usabilidad y soporte multiplataforma.",
         "all-rights-reserved": "Todos los derechos reservados.",
+        "portfolio-cv-tur": "Portfolio CV Tur",
+        "portfolio-cv-tur-description": "Portfolio personal creado con React y TypeScript para presentar mi currículum, habilidades y proyectos. La interfaz está desarrollada con Material-UI, ofreciendo un diseño moderno, responsive y fácil de navegar.",
         // Educación
         "education": "Educación",
         "here-you-can-see-my-educational-trajectory": "Aquí puedes ver mi trayectoria educativa",
@@ -186,6 +190,8 @@ i18n.use(initReactI18next).init({
         "tfg-backend-energy-tracker-description": "Entwicklung des Backends für das Projekt zur Verwaltung und Erfassung von Energieverbrauchsdaten im Stromzählernetz des Flughafens Leipzig/Halle, mit Fokus auf Skalierbarkeit, Integration in bestehende Systeme und Echtzeitanalyse.",
         "tfg-frontend-energy-tracker": "TFG Frontend Energy Tracker",
         "tfg-frontend-energy-tracker-description": "Entwicklung des Frontends für das Projekt zur Verwaltung und Erfassung von Energieverbrauchsdaten im Stromzählernetz des Flughafens Leipzig/Halle, mit Schwerpunkt auf intuitiver Visualisierung, Benutzerfreundlichkeit und plattformübergreifender Unterstützung.",
+        "portfolio-cv-tur": "Portfolio CV Tur",
+        "portfolio-cv-tur-description": "Persönliches Portfolio, entwickelt mit React und TypeScript, zur Präsentation meines Lebenslaufs, meiner Fähigkeiten und Projekte. Die Benutzeroberfläche wurde mit Material-UI erstellt und bietet ein modernes, responsives und benutzerfreundliches Design.",
         // Sección de educación
         "education": "Bildung",
         "here-you-can-see-my-educational-trajectory": "Hier können Sie meine Ausbildungshistorie sehen",
