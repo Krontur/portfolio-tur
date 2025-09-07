@@ -9,7 +9,7 @@ export default function Education() {
 
     return (
     <div id="educacion" style={{ textAlign: 'center', padding: '40px 20px' }}>
-            <Typography variant="h3" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>{t("education")}</Typography>
+            <Typography variant="h2" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>{t("education")}</Typography>
             <Typography variant="body1" color="text.primary">{t("here-you-can-see-my-educational-trajectory")}</Typography>
             <Timeline position="alternate" sx={{ margin: "12px 0", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
                 <TimelineEducationItem

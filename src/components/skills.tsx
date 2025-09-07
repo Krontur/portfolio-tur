@@ -8,7 +8,7 @@ export default function Skills() {
 
     return (
     <div id="habilidades-tecnicas" style={{ textAlign: 'center', padding: '40px 20px' }}>
-            <Typography variant="h3" component="h1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
+            <Typography variant="h2" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>
                 {t("technical-skills")}
             </Typography>
             <Typography variant="body1" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>

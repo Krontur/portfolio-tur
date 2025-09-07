@@ -38,9 +38,10 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: "'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
-    h1: { fontWeight: 800, color: '#fff' },
-    h2: { fontWeight: 700, color: '#fff' },
-    h3: { fontWeight: 600, color: '#fff' },
+    h1: { fontWeight: 800, color: '#fff', fontSize: '4rem' },
+    h2: { fontWeight: 700, color: '#fff', fontSize: '3rem' },
+    h3: { fontWeight: 600, color: '#fff', fontSize: '2,5rem' },
+    h4: { fontWeight: 500, color: '#fff', fontSize: '2rem' },
     button: { textTransform: "none" },
   },
 });

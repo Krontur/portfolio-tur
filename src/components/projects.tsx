@@ -10,7 +10,7 @@ export default function Projects() {
     return (
     <div id="proyectos" style={{ textAlign: 'center', padding: '30px 20px' }}>
             <Box sx={{ p: 2 }}>
-                <Typography variant="h3" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>{t("projects")}</Typography>
+                <Typography variant="h2" color="text.primary" sx={{ textAlign: 'center', margin: 3 }}>{t("projects")}</Typography>
                 <Typography variant="body1" color="text.primary">
                     {t("here-you-can-see-some-of-my-projects")}
                 </Typography>
