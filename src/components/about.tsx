@@ -9,7 +9,9 @@ export default function About() {
     <div id="sobre-mi" style={{ textAlign: 'center', padding: '40px 20px 20px 20px' }}>
             <Typography variant="h2" sx={{ textAlign: 'center', margin: 3 }}>{t("about-me")}</Typography>
             <Typography variant="body1" color="text.primary">
-                {t("i-am-oscar-gonzalez-tur")}
+                {t("i-am-oscar-gonzalez-tur").split("\n").map((line, i) => (
+                    <p key={i}>{line}</p>
+                    ))}
             </Typography>
         </div>
     );

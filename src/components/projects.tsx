@@ -20,40 +20,50 @@ export default function Projects() {
                     <ProjectCard
                         title={t("webapp-to-generate-orders")}
                         description={t("webapp-to-generate-orders-description")}
+                        detailed_description={t("webapp-to-generate-orders-detailed-description")}
                         imagepath="/images/projectOrders.png"
                         githuburl="https://github.com/Krontur/warehouse.git"
+                        button_details={t("button-details")}
                     />
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6, md: 4 }} key="project2" sx={{ display: 'flex', justifyContent: 'center' }}>
                     <ProjectCard
                         title={t("software-ams-update")}
                         description={t("software-ams-update-description")}
+                        detailed_description={t("software-ams-update-detailed-description")}
                         imagepath="/images/projectAMS.png"
                         githuburl={null}
+                        button_details={t("button-details")}
                     />
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6, md: 4 }} key="project3" sx={{ display: 'flex', justifyContent: 'center' }}>
                     <ProjectCard
                         title={t("tfg-backend-energy-tracker")}
                         description={t("tfg-backend-energy-tracker-description")}
+                        detailed_description={t("tfg-backend-energy-tracker-detailed-description")}
                         imagepath="/images/projectEnergyTracker.png"
                         githuburl="https://github.com/Krontur/energytracker.git"
+                        button_details={t("button-details")}
                     />
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6, md: 4 }} key="project4" sx={{ display: 'flex', justifyContent: 'center' }}>
                     <ProjectCard
                         title={t("tfg-frontend-energy-tracker")}
                         description={t("tfg-frontend-energy-tracker-description")}
+                        detailed_description={t("tfg-frontend-energy-tracker-detailed-description")}
                         imagepath="/images/projectFrontendEnergyTracker.png"
                         githuburl="https://github.com/Krontur/energytracker_frontend.git"
+                        button_details={t("button-details")}
                     />
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6, md: 4 }} key="project5" sx={{ display: 'flex', justifyContent: 'center' }}>
                     <ProjectCard
                         title={t("portfolio-cv-tur")}
                         description={t("portfolio-cv-tur-description")}
+                        detailed_description={t("portfolio-cv-tur-detailed-description")}
                         imagepath="/images/portfoliotur.png"
                         githuburl="https://github.com/Krontur/portfolio-tur.git"
+                        button_details={t("button-details")}
                     />
                 </Grid>
             </Grid>
