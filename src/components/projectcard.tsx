@@ -63,6 +63,7 @@ export default function ProjectCard({ title, description, imagepath, githuburl, 
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={handleOpen}
+                            href=""
                     >
                         {button_details ? button_details : "More Details"}
                     </Button>
