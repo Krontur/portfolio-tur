@@ -1,46 +1,54 @@
-import { Box, Button, TextField } from "@mui/material"
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { useRef } from "react";
+import { Alert, Box, Button, TextField } from "@mui/material"
+import emailjs from '@emailjs/browser';
+import type { FormEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 
 export default function ContactForm() {
     const { t } = useTranslation();
+    const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-    emailjs.init({
-        publicKey: import.meta.env.VITE_REACT_APP_PUBLIC_KEY,
-        // Do not allow headless browsers
-        blockHeadless: true,
-        blockList: {
-            // Block the suspended emails
-            list: ['foo@emailjs.com', 'bar@emailjs.com'],
-            // The variable contains the email address
-            watchVariable: 'userEmail',
-        },
-        limitRate: {
-            // Set the limit rate for the application
-            id: 'app',
-            // Allow 1 request per 10s
-            throttle: 10000,
-        },
+    useEffect(() => {
+        emailjs.init({
+            publicKey: import.meta.env.VITE_REACT_APP_PUBLIC_KEY,
+            blockHeadless: true,
+            blockList: {
+                list: ['foo@emailjs.com', 'bar@emailjs.com'],
+                watchVariable: 'email',
+            },
+            limitRate: {
+                id: 'app',
+                throttle: 10000,
+            },
         });
+    }, []);
 
     const form = useRef<HTMLFormElement>(null);
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!form.current) return;
+
+        const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
+        const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
+
+        if (!serviceId || !templateId || !import.meta.env.VITE_REACT_APP_PUBLIC_KEY) {
+            setStatus("error");
+            return;
+        }
+
+        setStatus("sending");
         emailjs.sendForm(
-            import.meta.env.VITE_REACT_APP_SERVICE_ID,
-            import.meta.env.VITE_REACT_APP_TEMPLATE_ID,
+            serviceId,
+            templateId,
             form.current
         ).then(
-            (result: EmailJSResponseStatus) => {
-                alert('message sent successfully...');
-                console.log(result.text); 
+            () => {
+                setStatus("success");
                 form.current?.reset();
             },
-            (error: EmailJSResponseStatus) => {
-                console.log(error.text);
+            () => {
+                setStatus("error");
             }
         );
     };
@@ -55,8 +63,10 @@ export default function ContactForm() {
             <TextField name="name" label={t("name")} variant="outlined" required />
             <TextField name="email" label={t("email")} variant="outlined" type="email" required />
             <TextField name="message" label={t("message")} variant="outlined" multiline rows={4} required />
-            <Button type="submit" variant="contained" color="primary">
-                {t("send")}
+            {status === "success" && <Alert severity="success">Mensaje enviado correctamente.</Alert>}
+            {status === "error" && <Alert severity="error">No se pudo enviar el mensaje. Intentalo de nuevo mas tarde.</Alert>}
+            <Button type="submit" variant="contained" color="primary" disabled={status === "sending"}>
+                {status === "sending" ? "Enviando..." : t("send")}
             </Button>
         </Box>
     );

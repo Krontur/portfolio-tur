@@ -215,10 +215,8 @@ export default function ElectroTechBackground({
 
     function onMouseMove(e: MouseEvent) {
       if (!interactive) return;
-      if (!canvas) return;
-      const rect = canvas.getBoundingClientRect();
-      mouse.current.x = e.clientX - rect.left;
-      mouse.current.y = e.clientY - rect.top;
+      mouse.current.x = e.clientX;
+      mouse.current.y = e.clientY;
       mouse.current.active = true;
     }
 
@@ -226,16 +224,18 @@ export default function ElectroTechBackground({
       mouse.current.active = false;
     }
 
-    window.addEventListener("resize", resize);
-    canvas.addEventListener("mousemove", onMouseMove);
-    canvas.addEventListener("mouseleave", onMouseLeave);
-    document.addEventListener("visibilitychange", () => {
+    function onVisibilityChange() {
       paused = document.hidden;
       if (!paused) {
         last = performance.now();
         rafRef.current = requestAnimationFrame(loop);
       }
-    });
+    }
+
+    window.addEventListener("resize", resize);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseleave", onMouseLeave);
+    document.addEventListener("visibilitychange", onVisibilityChange);
 
     resize();
     rafRef.current = requestAnimationFrame(loop);
@@ -243,8 +243,9 @@ export default function ElectroTechBackground({
     return () => {
       cancelAnimationFrame(rafRef.current);
       window.removeEventListener("resize", resize);
-      canvas.removeEventListener("mousemove", onMouseMove);
-      canvas.removeEventListener("mouseleave", onMouseLeave);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseleave", onMouseLeave);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
     };
   }, [bg, colorPrimary, colorSecondary, density, interactive, opacity]);
 
@@ -254,8 +255,8 @@ export default function ElectroTechBackground({
       style={{
         position: "fixed",
         inset: 0,
-  zIndex: 0,
-  pointerEvents: "none",
+        zIndex: 0,
+        pointerEvents: "none",
       }}
     >
       <canvas
@@ -266,7 +267,7 @@ export default function ElectroTechBackground({
             left: 0,
             width: "100%",
             height: "100%",
-            zIndex: -1,
+            zIndex: 0,
             pointerEvents: "none",
         }}
         />

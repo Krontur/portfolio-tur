@@ -7,8 +7,8 @@ interface ProjectCardProps {
     detailed_description: string;
     imagepath: string;
     githuburl?: string | null;
-    button_details?: string;
     linkLabel?: string;
+    button_details?: string;
 }
 
 const style = {
@@ -16,7 +16,9 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: { xs: '90vw', sm: 400 },
+  maxHeight: '80vh',
+  overflow: 'auto',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -61,10 +63,7 @@ export default function ProjectCard({ title, description, imagepath, githuburl, 
                     <Button
                             size="small"
                             color="primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
                             onClick={handleOpen}
-                            href=""
                     >
                         {button_details ? button_details : "More Details"}
                     </Button>

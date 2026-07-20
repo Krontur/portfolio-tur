@@ -20,10 +20,10 @@ export default function Contact() {
                     <Avatar alt="Email" src="/icons/mail.svg" sx={{ width: 56, height: 56 }} component={'a'} href="mailto:oscar.gtur@gmail.com"/>
                 </Tooltip>
                 <Tooltip title="LinkedIn: oscargtur">
-                    <Avatar alt="LinkedIn" src="/icons/linkedin.svg" sx={{ width: 56, height: 56 }} component={'a'} href="https://www.linkedin.com/in/oscargtur/" target="_blank"/>
+                    <Avatar alt="LinkedIn" src="/icons/linkedin.svg" sx={{ width: 56, height: 56 }} component={'a'} href="https://www.linkedin.com/in/oscargtur/" target="_blank" rel="noopener noreferrer"/>
                 </Tooltip>
                 <Tooltip title="GitHub: krontur">
-                    <Avatar alt="GitHub" src="/icons/github.svg" sx={{ width: 56, height: 56 }} component={'a'} href="https://github.com/krontur" target="_blank"/>
+                    <Avatar alt="GitHub" src="/icons/github.svg" sx={{ width: 56, height: 56 }} component={'a'} href="https://github.com/krontur" target="_blank" rel="noopener noreferrer"/>
                 </Tooltip>
             </Stack>
         </div>

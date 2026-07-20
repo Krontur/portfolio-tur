@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <>
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100vh", zIndex: -1, minWidth: '100vw', minHeight: '100vh', backgroundColor: 'black' }}>
+      <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", backgroundColor: 'black' }}>
         <ElectroTechBackground  />
       </div>
       <ThemeProvider theme={theme}>
@@ -34,7 +34,7 @@ export default function App() {
         </Box>
         </AppBar>
 
-        <div>
+        <div style={{ position: "relative", zIndex: 1 }}>
           <Start />
           <About />
           <Skills />
