@@ -16,6 +16,17 @@ export default function Projects() {
                 </Typography>
             </Box>
             <Grid container spacing={2} justifyContent="center" alignItems="stretch">
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} key="project0" sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <ProjectCard
+                        title={t("swagger-json-to-markdown")}
+                        description={t("swagger-json-to-markdown-description")}
+                        detailed_description={t("swagger-json-to-markdown-detailed-description")}
+                        imagepath="/icons/typescript.svg"
+                        githuburl="https://www.linkedin.com/feed/update/urn:li:activity:7461168116719312897/"
+                        linkLabel="LinkedIn"
+                        button_details={t("button-details")}
+                    />
+                </Grid>
                 <Grid size={{ xs: 12, sm: 6, md: 4 }} key="project1" sx={{ display: 'flex', justifyContent: 'center' }}>
                     <ProjectCard
                         title={t("webapp-to-generate-orders")}

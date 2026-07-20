@@ -8,12 +8,11 @@ export default function About() {
     return (
     <div id="sobre-mi" style={{ textAlign: 'center', padding: '40px 20px 20px 20px' }}>
             <Typography variant="h2" sx={{ textAlign: 'center', margin: 3 }}>{t("about-me")}</Typography>
-            <Typography variant="body1" color="text.primary">
-                {t("i-am-oscar-gonzalez-tur").split("\n").map((line, i) => (
+            <Typography variant="body1" color="text.primary" component="div">
+                {t("about-me-description").split("\n").map((line, i) => (
                     <p key={i}>{line}</p>
                     ))}
             </Typography>
         </div>
     );
 }
- 

@@ -8,6 +8,7 @@ interface ProjectCardProps {
     imagepath: string;
     githuburl?: string | null;
     button_details?: string;
+    linkLabel?: string;
 }
 
 const style = {
@@ -23,7 +24,7 @@ const style = {
 };
 
 
-export default function ProjectCard({ title, description, imagepath, githuburl, detailed_description, button_details }: Readonly<ProjectCardProps>) {
+export default function ProjectCard({ title, description, imagepath, githuburl, linkLabel = "GitHub", detailed_description, button_details }: Readonly<ProjectCardProps>) {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -53,7 +54,7 @@ export default function ProjectCard({ title, description, imagepath, githuburl, 
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        GitHub
+                        {linkLabel}
                     </Button>
                 )}
                 <>

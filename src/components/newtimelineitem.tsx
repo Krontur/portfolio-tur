@@ -6,9 +6,10 @@ interface TimelineExperienceItemProps {
     title: string;
     company: string;
     description: string;
+    showConnector?: boolean;
 }
 
-export default function NewTimelineItem({ year, title, company, description }: Readonly<TimelineExperienceItemProps>) {
+export default function NewTimelineItem({ year, title, company, description, showConnector = true }: Readonly<TimelineExperienceItemProps>) {
     return (
         <TimelineItem>
             <TimelineOppositeContent>
@@ -22,7 +23,7 @@ export default function NewTimelineItem({ year, title, company, description }: R
                         {year}
                     </Typography>
                 </TimelineDot>
-                {title ? <TimelineConnector sx={{ bgcolor: "success.main", minHeight: 80 }} /> : null}
+                {showConnector ? <TimelineConnector sx={{ bgcolor: "success.main", minHeight: 80 }} /> : null}
             </TimelineSeparator>
             <TimelineContent>
                 <Typography variant="h6" component="span" color="text.primary">
