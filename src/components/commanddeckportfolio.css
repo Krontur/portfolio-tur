@@ -1,0 +1,750 @@
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05080d;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.deck-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 24px clamp(18px, 5vw, 72px) 72px;
+  color: #edf7ff;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0, 229, 255, 0.18), transparent 28rem),
+    radial-gradient(circle at 80% 0%, rgba(94, 255, 176, 0.14), transparent 32rem),
+    linear-gradient(135deg, #05080d 0%, #08121d 48%, #06090f 100%);
+}
+
+.deck-grid-backdrop {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(151, 240, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(151, 240, 255, 0.09) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.deck-nav {
+  position: fixed;
+  top: 18px;
+  right: clamp(14px, 5vw, 72px);
+  left: clamp(14px, 5vw, 72px);
+  z-index: 5;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding: 14px 18px;
+  border: 1px solid rgba(151, 240, 255, 0.18);
+  border-radius: 22px;
+  background: rgba(5, 10, 18, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.deck-nav .MuiFormControl-root {
+  justify-self: end;
+  flex: 0 0 auto;
+}
+
+.deck-scroll-top {
+  position: fixed;
+  right: clamp(18px, 4vw, 42px);
+  bottom: clamp(18px, 4vw, 42px);
+  z-index: 6;
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid rgba(151, 240, 255, 0.28);
+  border-radius: 999px;
+  color: #031012;
+  background: linear-gradient(135deg, #59ffb3, #8af6ff);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.36), 0 0 28px rgba(89, 255, 179, 0.24);
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.deck-scroll-top:hover {
+  transform: translateY(-2px);
+}
+
+.deck-brand {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  color: #9cf7ff;
+  text-decoration: none;
+}
+
+.deck-brand span {
+  color: #6f8292;
+}
+
+.deck-nav nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  color: #cfe9f1;
+  font-size: 0.92rem;
+}
+
+.deck-nav nav::-webkit-scrollbar {
+  display: none;
+}
+
+.deck-nav nav a {
+  text-decoration: none;
+}
+
+.deck-nav nav a:hover {
+  color: #59ffb3;
+}
+
+.deck-hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  min-height: calc(100vh - 96px);
+  padding: 92px 0 28px;
+}
+
+.deck-eyebrow,
+.deck-section-kicker {
+  margin: 0 0 14px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #59ffb3;
+}
+
+.deck-shell h1,
+.deck-shell h2,
+.deck-shell h3,
+.deck-shell p {
+  margin-top: 0;
+}
+
+.deck-shell h1 {
+  max-width: 1060px;
+  margin-bottom: 18px;
+  font-size: clamp(2.8rem, 6.8vw, 6.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.08em;
+}
+
+.deck-shell h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.deck-shell h3 {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.deck-hero-lead,
+.deck-hero-summary,
+.deck-about-copy p,
+.deck-section-heading-row p,
+.deck-section-lead,
+.deck-timeline-card p,
+.deck-project-card p,
+.deck-education-card p,
+.deck-contact-copy p {
+  color: #b7c7d2;
+  line-height: 1.75;
+}
+
+.deck-hero-lead {
+  max-width: 720px;
+  font-size: clamp(0.98rem, 1.5vw, 1.12rem);
+  color: #d7edf4;
+}
+
+.deck-hero-summary {
+  max-width: 820px;
+}
+
+.deck-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.deck-primary-action,
+.deck-secondary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.deck-primary-action {
+  color: #031012;
+  background: linear-gradient(135deg, #59ffb3, #8af6ff);
+  box-shadow: 0 0 28px rgba(89, 255, 179, 0.24);
+}
+
+.deck-secondary-action {
+  border: 1px solid rgba(151, 240, 255, 0.22);
+  color: #d8f8ff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.deck-impact-card,
+.deck-glass-panel,
+.deck-timeline-card,
+.deck-project-card,
+.deck-education-card,
+.deck-contact-panel,
+.deck-contact-copy,
+.deck-skill-card {
+  border: 1px solid rgba(151, 240, 255, 0.16);
+  background: linear-gradient(180deg, rgba(11, 25, 38, 0.86), rgba(5, 10, 18, 0.74));
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(18px);
+}
+
+.deck-impact-card {
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  padding: 20px;
+  border-radius: 34px;
+}
+
+.deck-impact-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  color: #59ffb3;
+}
+
+.deck-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #59ffb3;
+  box-shadow: 0 0 22px #59ffb3;
+}
+
+.deck-current-role {
+  margin: 18px 0 14px;
+  padding: 18px;
+  border: 1px solid rgba(151, 240, 255, 0.14);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(89, 255, 179, 0.12), transparent 55%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.deck-current-role p {
+  margin-bottom: 10px;
+  color: #8af6ff;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.deck-current-role h2 {
+  margin-bottom: 8px;
+  font-size: clamp(1.75rem, 2.8vw, 2.6rem);
+}
+
+.deck-current-role strong {
+  color: #d7edf4;
+  font-size: 1.08rem;
+}
+
+.deck-impact-summary {
+  color: #b7c7d2;
+  line-height: 1.6;
+}
+
+.deck-impact-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.deck-impact-stack span {
+  padding: 7px 10px;
+  border: 1px solid rgba(89, 255, 179, 0.22);
+  border-radius: 999px;
+  color: #cbfff0;
+  background: rgba(89, 255, 179, 0.08);
+  font-size: 0.86rem;
+}
+
+.deck-impact-card dl {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+
+.deck-impact-card dl div {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.deck-impact-card dt {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 1rem;
+  color: #edf7ff;
+}
+
+.deck-impact-card dd {
+  margin: 6px 0 0;
+  color: #8fa4b4;
+  font-size: 0.8rem;
+}
+
+.deck-split-section,
+.deck-stack-section,
+.deck-timeline-section,
+.deck-project-section,
+.deck-education-section,
+.deck-contact-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 72px;
+  scroll-margin-top: 120px;
+}
+
+.deck-split-section {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1.58fr);
+  gap: clamp(20px, 3vw, 36px);
+  align-items: start;
+}
+
+.deck-glass-panel,
+.deck-contact-panel,
+.deck-contact-copy {
+  border-radius: 30px;
+  padding: clamp(22px, 4vw, 40px);
+}
+
+.deck-about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.deck-section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: end;
+}
+
+.deck-section-heading-row p {
+  max-width: 460px;
+}
+
+.deck-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.deck-skill-card {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 12px;
+  border-radius: 24px;
+  color: #dff8ff;
+}
+
+.deck-skill-card img,
+.deck-project-media img {
+  max-width: 54px;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+.deck-skill-fallback {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid rgba(89, 255, 179, 0.4);
+  border-radius: 16px;
+  color: #59ffb3;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 800;
+}
+
+.deck-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.deck-project-card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  min-height: 480px;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 28px;
+}
+
+.deck-project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(#59ffb3, #8af6ff);
+}
+
+.deck-corner {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border-top: 1px solid #59ffb3;
+  border-right: 1px solid #59ffb3;
+  opacity: 0.8;
+}
+
+.deck-project-media {
+  display: grid;
+  min-height: 150px;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(151, 240, 255, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.deck-project-media img[src*="images"] {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  border-radius: 21px;
+  object-fit: cover;
+}
+
+.deck-project-body {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.deck-project-card details {
+  margin-top: 16px;
+}
+
+.deck-project-card summary {
+  cursor: pointer;
+  color: #59ffb3;
+  font-weight: 700;
+}
+
+.deck-project-card footer {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.deck-project-card footer span,
+.deck-project-card footer a {
+  color: #8af6ff;
+}
+
+.deck-project-card footer a {
+  width: fit-content;
+  text-decoration: none;
+}
+
+.deck-project-card footer small {
+  color: #8fa4b4;
+}
+
+.deck-timeline-grid {
+  --timeline-axis: 22px;
+  --timeline-card-offset: 46px;
+  --timeline-node-radius: 15px;
+  position: relative;
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.deck-timeline-grid::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--timeline-axis) - 1px);
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: linear-gradient(#59ffb3, #8af6ff, transparent);
+}
+
+.deck-timeline-card {
+  position: relative;
+  margin-left: var(--timeline-card-offset);
+  padding: 24px;
+  border-radius: 26px;
+}
+
+.deck-timeline-node {
+  position: absolute;
+  box-sizing: border-box;
+  left: calc(var(--timeline-axis) - var(--timeline-card-offset) - var(--timeline-node-radius));
+  top: 24px;
+  width: calc(var(--timeline-node-radius) * 2);
+  height: calc(var(--timeline-node-radius) * 2);
+  border: 4px solid #59ffb3;
+  border-radius: 999px;
+  background: #06121c;
+  box-shadow: 0 0 24px rgba(89, 255, 179, 0.7);
+}
+
+.deck-status-chip,
+.deck-mini-tags span {
+  border: 1px solid rgba(89, 255, 179, 0.22);
+  border-radius: 999px;
+  color: #cbfff0;
+  background: rgba(89, 255, 179, 0.08);
+}
+
+.deck-status-chip {
+  display: inline-flex;
+  margin: 0 12px 14px 0;
+  padding: 6px 9px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.deck-timeline-card time,
+.deck-company,
+.deck-education-card time {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  color: #8af6ff;
+}
+
+.deck-mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.deck-mini-tags span {
+  padding: 8px 11px;
+  font-size: 0.86rem;
+}
+
+.deck-education-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.deck-education-card {
+  min-height: 260px;
+  padding: 22px;
+  border-radius: 26px;
+}
+
+.deck-contact-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 18px;
+}
+
+.deck-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.deck-contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(151, 240, 255, 0.22);
+  border-radius: 999px;
+  color: #d8f8ff;
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+}
+
+.deck-contact-panel form {
+  max-width: none;
+}
+
+.deck-contact-panel .MuiOutlinedInput-root {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.deck-contact-panel .MuiButton-root {
+  min-height: 46px;
+  border-radius: 999px;
+  color: #031012;
+  font-weight: 800;
+  background: linear-gradient(135deg, #59ffb3, #8af6ff);
+}
+
+.deck-footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 56px;
+  color: #8fa4b4;
+  text-align: center;
+}
+
+@media (max-width: 1180px) {
+  .deck-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .deck-skill-grid,
+  .deck-education-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .deck-nav {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+
+  .deck-nav nav {
+    grid-column: auto;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+    font-size: 0.86rem;
+  }
+
+  .deck-hero,
+  .deck-split-section,
+  .deck-contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-impact-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .deck-shell {
+    padding-inline: 14px;
+  }
+
+  .deck-nav {
+    top: 14px;
+    right: 14px;
+    left: 14px;
+  }
+
+  .deck-hero {
+    padding-top: 112px;
+  }
+
+  .deck-brand span {
+    display: none;
+  }
+
+  .deck-shell h1 {
+    margin-bottom: 14px;
+    font-size: clamp(2.35rem, 13vw, 3.6rem);
+    line-height: 0.94;
+  }
+
+  .deck-hero-lead,
+  .deck-hero-summary {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .deck-actions {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .deck-primary-action,
+  .deck-secondary-action {
+    min-height: 42px;
+    padding: 0 14px;
+  }
+
+  .deck-impact-card dl,
+  .deck-project-grid,
+  .deck-skill-grid,
+  .deck-education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-section-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .deck-project-card {
+    min-height: auto;
+  }
+}
