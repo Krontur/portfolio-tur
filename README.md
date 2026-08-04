@@ -23,5 +23,5 @@ npm run build
 npm run preview
 ```
 
-The Vite base path is configured for `https://krontur.github.io/portfolio-tur/`.
-The repository is `Krontur/portfolio-tur`, with GitHub Pages set to use GitHub Actions.
+The default Vite build uses `/` for Vercel and local previews. The GitHub Actions workflow
+overrides the base path with `/portfolio-tur/` for `https://krontur.github.io/portfolio-tur/`.
